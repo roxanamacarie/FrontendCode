@@ -32,11 +32,11 @@ var employeesList = [
 ];
 
 function showList() {
-    var myTable = '<table class="table table-striped" border="1"><tr><th> First Name </th><th> Last Name</th><th>Phone </th><th> Salary </th></tr>';
+    var myTable = '<table class="table table-striped" border="1"><tr><th> First Name </th><th> Last Name</th><th>Phone </th><th> Salary </th><th> View </th><th> Delete </th></tr>';
 
     for (var i in employeesList) {
         myTable +=
-            '<tr><td>' + employeesList[i].firstName + '</td><td>' + employeesList[i].lastName + '</td><td>' + employeesList[i].phone + '</td><td>' + employeesList[i].salary + '</td></tr>';
+            '<tr><td>' + employeesList[i].firstName + '</td><td>' + employeesList[i].lastName + '</td><td>' + employeesList[i].phone + '</td><td>' + employeesList[i].salary +'</td><td><button type="button" onclick ="viewalert('+ i+')">View</button></td><td><button type="button" onclick ="deletealert('+ i+')">Delete</button></td></tr>' ;
 
     }
 
@@ -79,5 +79,15 @@ function showSalary(){
 function deleteLastEmployee(){
     employeesList.pop();
 
+    showList();
+}
+
+function viewalert(i){
+    alert(employeesList[i].firstName+" "+employeesList[i].lastName+" "+employeesList[i].phone+" "+employeesList[i].salary);
+    showList();
+}
+
+function deletealert(i){
+    employeesList.splice(i,1);
     showList();
 }
