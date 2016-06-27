@@ -26,7 +26,7 @@ hrApp.factory('commonResourcesFactory', function () {
 );
 
 hrApp.factory('commonResourcesFactoryBackup', function () {
-        var baseUrl = "http://http://hrapp-zth.rhcloud.com/hrapp/";
+        var baseUrl = "http://hrapp-zth.rhcloud.com/hrapp/";
         return {
             findAllDepartmentsUrl : baseUrl + "departments",
             findAllEmployeesUrl : baseUrl + "employees",
