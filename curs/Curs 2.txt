@@ -1,0 +1,96 @@
+HTML
+-continutul paginii
+<html> 
+  <head>
+descrierea paginii 
+fisiere externe
+  </head>
+  <body>
+  </body>
+</html>
+
+
+CSS
+-cascading style sheets
+-designul paginii
+
+JavaScript
+-functionalitatea paginii HTML
+-limbaj interpretat
+-EcmaScript
+-putem comunica sincron 
+-request sincron nu mai e paralel, executia se opreste
+
+
+vs Java/C++
+
+JavaScript e interpretat, Java e compilat - sta la latitudinea browserului cum il interpreteaza
+Java programare , JavaScript scripting
+JS slab tipat 
+
+Putem sa adaugam in HTML cu <script> dar nu e best practice
+Scripturi externe -good practice
+
+
+In functie de cum introduci fisierele de CSS si JS, se iau in ordine si asa sunt rulate.
+
+Best practice - CSS, apoi JS.
+
+
+JS 
+
+
+var - variabile
+nu e type safe
+scop local sau global
+
+tipuri - String, Boolean, Number, Undefined, Null, Array, Object
+Undefined il da browserul, e default
+Null dam noi
+
+
+Array:
+var myArray = new Array("a","b",1,2);
+	
+Obiecte: 
+var myObk = new Object();
+ 	    {};
+
+prin prototype se creeaza mostenirea 
+<script>
+
+function employee(name, jobtitle){
+this.name= name;
+}
+
+var fred= new emplyee(...);
+employee.prototype.salary=null;
+fred.salary=2000;
+
+document.write(fred.salary);
+</script>
+
+
+daca extindem employee
+employee.prototype = new human(..);
+
+
+Acces :
+myObj.myProp;
+
+
+for( var key in p)
+if(p.hasOwnProperty(key)){ // se face deoarece p poate mosteni diferite prop
+	alert(key + " ->" + p[key]);
+}
+}
+
+
+
+Functii:
+Nu e o problema daca apelam o fucntie cu mai putini parametrii decat am definit noi
+
+function myF(params...)
+
+anonime 
+var myF = function( params ... )

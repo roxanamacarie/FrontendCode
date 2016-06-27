@@ -1,0 +1,121 @@
+Curs 3
+
+Tools Frontend development 
+
+Node.js
+npm- package manager( maven -bit tool java) te ajuta sa instalezi diferite aplicatii
+Bower
+Grunt
+
+
+Node.js - runtime environment for server-side app
+	- apps in JS
+	- runs apps that act as Web servers
+
+npm	- Node package manager
+	- manages dependencies
+	- allows to install Node.js app
+	- package.json - lista de perechi cheie valoare
+	- npm install in folder unde am package.json
+
+
+Bower	-package management system
+	-Bower ce e Maven pt Java dar pt client
+	-bower.json pt parsare
+	-bower install
+	-se instaleaza cu ajutorul lui npm
+
+Grunt	-putem crea taskuri 
+	-porneste un web server local
+	-task runner
+	-minification ??? linkul de bootstrap era minificat, era condensat
+		-preia js si css, comprima spatiile, reduce marimea fisierelor 
+		-se inlesneste comunicarea server client
+	-concateneaza fisiere JS
+
+
+
+Angular JS
+
+DI-Dependency Injection 
+	-injectarea automata a unor obiecte de care nu mai avem nevoie la un mom dat
+
+-Framework de JS
+-MVC (MVW) MV star
+-ofera two way binding - sincronizarea automata, implicita a viewului cu modelul(View tabelul, model lista de angajati).
+		nu trebuie sa faci refresh, se face automat
+
+-extinde vocabularul HTML
+-compileaza templateuri 
+-functioneaza pe baza scopurilor
+
+
+MVW - Model view whatever ( MVC- Model View Controller)
+Model -partea de date( baza de date dintr-o aplicatie)
+VIew - produsul care reiese in urma calculelor
+Controller - containerul de functii si metode care ajuta la crearea modelului si al viewului
+
+SCope- obiect atasat de model, reprezinta modelul unei aplicatii
+
+Avantaje
++ putem crea Single Page Application
++ data binding ce se face automat, experienta responsive 
++ unit testable
++ dependecy injection
++ componente reutilizabile
++ less code, more functionality
+
+
+Aplicatie
+- trebuie sa scriem module
+- modul - container pt partile unei aplicatii
+- (document e un obiect) 
+- mecanism de compilare
+- crearea unui modul
+		angular.module('appName',[]);	lista contine dependentele
+		<ANY ng-app="appName" ... > .... </ANY>  <- in HTML
+Obiecte importate : angular, $rootscope, $scope,etc;
+Directive 
+- elemente suplimentare ng-app
+- extind vocablarul browserului
+- markere pe DOM
+- adauga comportamente specifice
+
+
+ng-app leaga angular de HTML
+
+
+
+
+Controlere - seturi de functii
+- interactioneaza cu template-urile
+
+	nume.controller("nume controller",lista de dependente);
+	myApp.controller('MyController',['dependency',function(dependency){..}])
+	myApp.controller('MyController',function(dependency){..})
+
+
+fiecare controller are scope-ul lui
+Scope- face leg intre model si view 
+view poate schimba modelul, si invers 
+
+
+Directive Angular:
+ng-bind
+ng-model
+
+scope-ul lui ng controller e numai in zona de div descrisa
+
+
+ng-click ~ onclick din JS, dar e directica de Angular 
+	-setTitle pt OtherController, se face trigger la functie
+
+ng-show - afiseaza acel element daca directiva este adevarata, altfel o face sa dispara
+ng-hide - ng-show invers
+ng-if - ng-if il scoate de tot pe cand ng-show il face doar invizibil
+
+Scope- reprezinta modelul 
+
+	
+		
+		

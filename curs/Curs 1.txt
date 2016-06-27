@@ -1,0 +1,46 @@
+Virtual Machine vs Containers
+
+Containerul nu are - hypervisor, ci are un Docker Engine care gestioneaza resursele. 
+		   - Guest OS
+
+Hypervisor. HyperVI Windows
+	    VMWare, VirtualBox 
+VM proces ce ruleaza pe un sistem fizic.
+Are hardware si SO separate. 
+
+
+Container:
+
+Nu au SO propriu, refolosesc anumite librarii din host OS.Pune la disp utilizatorului un mod de rulare izolat.
+Folosit pt performanta.
+
+Cand memoria RAM se termina, serverul intra in swap.
+
+VM si Containerele funct ca procese.
+Nu exista conflicte.
+Containerele izoleaza aplicatiile, exista probleme de securitate.
+
+Beneficii:
+-sunt light, pornesc usor (au nevoie doar de imagine si contin referinte)
+-sunt shareable 
+-reduce management overhead, shareuiesc un singur OS 
+
+Dezavantaje:
+-Kernelul SO-ului fiind shareuit nu putem rula arhitecturi diferite
+Ai Windows -> rulezi doar Windows 
+Oracle Virtual Box, facem work around ( are linux si putem porni containere de linux)
+se shareuieste kernelul de la docker
+-vulnerabilitati de securitate
+
+
+Docker
+
+-o suita de tooluri , sistem complet ce ne permite rularea containerelor
+-Oracle VM, terminal
+-e open source , google, amazon => folosesc Docker
+
+Jenkins
+
+-tehnologie care se integreaza foarte bine
+
+
