@@ -1,0 +1,3 @@
+<select ng-model="selectedText" ng-change="changeColor()" ng-options="color as color.text for color in colors track by color.text"></select>
+<select ng-model="groupText" ng-options="color as color.text group by color.class for color in colors track by color.text"></select>
+<span ng-class="colorClass.class"> Some Text </span>
