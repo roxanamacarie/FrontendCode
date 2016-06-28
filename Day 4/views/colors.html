@@ -5,6 +5,6 @@
 <div>
     <input type="text" ng-model="inputText"> Input </input>
 </div>
-<div ng-repeat="color in colors|filter:inputText">
+<div ng-repeat="color in colors|filter:{text:inputText}">
     {{color.text}}
     </div>
