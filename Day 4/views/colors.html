@@ -1,3 +1,10 @@
-<select ng-model="selectedText" ng-change="changeColor()" ng-options="color as color.text for color in colors track by color.text"></select>
+<select ng-model="selectedText" ng-change="changeColor()"
+        ng-options="color as color.text for color in colors track by color.text" xmlns="http://www.w3.org/1999/html"></select>
 <select ng-model="groupText" ng-options="color as color.text group by color.class for color in colors track by color.text"></select>
 <span ng-class="colorClass.class"> Some Text </span>
+<div>
+    <input type="text" ng-model="inputText"> Input </input>
+</div>
+<div ng-repeat="color in colors|filter:inputText">
+    {{color.text}}
+    </div>

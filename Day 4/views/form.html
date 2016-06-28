@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Form</title>
-</head>
-<body>
+<ng-form name="myForm" ng-controller="FormsController" class="my-form">
+        userType: <input name="input" ng-model="userType" required>
+        <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+        userType = {{userType}}<br>
+        $pristine = {{ myForm.input.$pristine}}<br>
+        $dirty = {{myForm.input.$dirty}}<br>
+        $valid = {{myForm.input.$valid}}<br>
+        $invalid = {{myForm.input.$invalid}}<br>
+        $submitted = {{myForm.input.$submitted}}<br>
+        $error = {{myForm.input.$error}}<br>
+        $error.required = {{!!myForm.$error.required}}<br>
 
-</body>
-</html>
+        <button class="btn btn-default" ng-click="submitFunction()">Submit</button>
+</ng-form>
+

@@ -11,9 +11,7 @@ hrApp.config(['$routeProvider', function ($routeProvider) {
             controller: 'FormsController'
         })
 
-    /*.otherwise({
-       redirectTo: 'views/main.html'
-    });*/
+    
 }]);
 
 
