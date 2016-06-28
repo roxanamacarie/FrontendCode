@@ -1,0 +1,40 @@
+Angular - continuare
+
+
+ng-change 
+	-evalueaza expresia cand utilizatorul schimba inputul
+	-trebuie sa avem ng-model
+	-expresia ng-change se schimba cand schimbam datele din model
+
+ng-class
+	-folosit pentru stiluri, css-uri
+	-se poate pune pe o variabila din scope
+	-$scope.hasError=true;
+
+<div class="form-group" ng-class ..........
+
+
+ng-options
+	- e folosit cand avem select 
+	- itereaza un array sau un object 
+	- folosit cu ng-model
+
+<select ng-options="item.subItem as item, label for item in values track by item.id" ng-model="selected">
+
+
+	array: label for value in array; select as label for ...
+
+
+Form
+
+pristine - nu a fost atins
+dirty - opus pristine
+submitted - daca a fost trimis pe server
+
+
+Filtre
+
+Pipe - orderBy 
+     - date 
+     - filter un fel de grep 
+     - 
