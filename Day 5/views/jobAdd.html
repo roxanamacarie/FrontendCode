@@ -1,0 +1,56 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add Job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobId.$invalid && jobAddForm.jobId.$dirty }">
+                        <label for="jobId">Job Id:</label>
+                        <input type="number" id="jobId" name="jobId" class="form-control" ng-model="job.jobId"
+                               placeholder="Job Id"  required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobTitle.$invalid && jobAddForm.jobTitle.$dirty }">
+                        <label for="jobTitle">Job Title:</label>
+                        <input type="text" id="jobTitle" name="jobTitle" class="form-control" ng-model="job.jobTitle"
+                               placeholder="Job Title"  required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.maxSalary.$invalid && jobAddForm.maxSalary.$dirty }">
+                        <label for="maxSalary">Max Salary</label>
+                        <input type="number" id="maxSalary" name="maxSalary" class="form-control" ng-model="job.maxSalary"
+                               placeholder="Max Salary"  required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" ng-class="{ 'has-error': jobAddForm.minSalary.$invalid && jobAddForm.minSalary.$dirty }">
+                        <label for="minSalary">Min Salary</label>
+                        <input type="number" id="minSalary" name="minSalary" class="form-control" ng-model="job.minSalary"
+                               placeholder="Min Salary"  required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <div class="container">
+                        <p>
+                            <button class="btn btn-primary btn-lg" role="button" ng-click="create(job)" ng-disabled="jobAddForm.$invalid" >Save</button>
+                            <a class="btn btn-primary btn-lg" role="button" ng-click="reset()">Reset</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-form>
+    </div>
+</div>
