@@ -20,6 +20,17 @@ hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactoryBackup', funct
                             "departmentId": 90
                         };
                     });
+            },
+            findAll: function () {
+                return $http({url: CommonResourcesFactoryBackup.findAllEmployeesUrl, method: 'GET'})
+                    .success(function (data, status, headers, config) {
+                        return data;
+                    })
+                    .error(function (err) {
+                        alert("Error!")
+
+                    })
+
             }
         }
     }]
