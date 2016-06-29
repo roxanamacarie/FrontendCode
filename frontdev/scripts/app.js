@@ -91,3 +91,44 @@ function deletealert(i){
     employeesList.splice(i,1);
     showList();
 }
+
+function sort(type) {
+
+   // var type = document.getElementById('sort');
+    if(type == 1) {
+        employeesList.sort(function (a, b) {
+            if (a.firstName < b.firstName) return -1;
+            if (a.firstName > b.firstName) return 1;
+            return 0;
+        })
+
+        showList();
+    }
+    if(type == 2) {
+        employeesList.sort(function (a, b) {
+            if (a.lastName < b.lastName) return -1;
+            if (a.lastName > b.lastName) return 1;
+            return 0;
+        })
+
+        showList();
+    }
+    if(type == 3) {
+        employeesList.sort(function (a, b) {
+            if (a.phone < b.phone) return -1;
+            if (a.phone> b.phone) return 1;
+            return 0;
+        })
+
+        showList();
+    }
+    if(type == 4) {
+        employeesList.sort(function (a, b) {
+            if (a.salary < b.salary) return -1;
+            if (a.salary > b.salary) return 1;
+            return 0;
+        })
+
+        showList();
+    }
+}
